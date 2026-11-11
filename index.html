@@ -146,5 +146,6 @@ h1{margin:6px 0 0;font:800 40px/1.05 var(--fd);letter-spacing:.01em;background:l
 })();
 (function(){var im=document.querySelector('.logo-wrap img');function go(){try{var c=document.createElement('canvas');c.width=im.naturalWidth;c.height=im.naturalHeight;var x=c.getContext('2d');x.drawImage(im,0,0);var D=x.getImageData(0,0,c.width,c.height),p=D.data;for(var k=0;k<p.length;k+=4){p[k+3]=Math.min(255,Math.max(p[k],p[k+1],p[k+2])*6)}x.putImageData(D,0,0);im.src=c.toDataURL('image/png');}catch(e){}document.querySelector('link[rel=icon]').href=im.src}if(im.complete)go();else im.onload=go})();
 </script>
+<script>(function(){var ac;document.addEventListener('pointerdown',function(ev){if(!ev.target.closest('a,button,summary'))return;try{ac=ac||new(window.AudioContext||window.webkitAudioContext)();var o=ac.createOscillator(),g=ac.createGain(),t=ac.currentTime;o.type='triangle';o.frequency.setValueAtTime(2400,t);g.gain.setValueAtTime(.18,t);g.gain.exponentialRampToValueAtTime(.001,t+.02);o.connect(g);g.connect(ac.destination);o.start(t);o.stop(t+.025)}catch(x){}});})();</script>
 </body>
 </html>
